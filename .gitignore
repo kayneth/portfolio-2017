@@ -18,4 +18,6 @@ yarn-error.log*
 
 ./idea
 
-'.idea' 
+'.idea'
+
+src/**/*.css

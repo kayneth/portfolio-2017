@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Recaptcha, { ReactRecaptcha } from 'react-recaptcha';
+import Recaptcha  from 'react-recaptcha';
 import {Helmet} from "react-helmet";
 
 export default class ContactForm extends Component {
@@ -53,7 +53,7 @@ export default class ContactForm extends Component {
                     <input type="text"/>
                     <Recaptcha
                         ref={e => this.recaptchaInstance = e}
-                        sitekey= {this.sitekey}
+                        sitekey={this.sitekey}
                         size="compact"
                         render="explicit"
                         verifyCallback={this.verifyCallback}
