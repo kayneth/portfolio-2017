@@ -1,0 +1,56 @@
+@import '../../variables';
+
+.github-projects{
+  padding: 0;
+}
+
+.github-project{
+  position: relative;
+  margin: 20px auto;
+  padding: 10px;
+  overflow: hidden;
+
+  border-radius: 2px;
+  list-style: none;
+
+  background: #fff;
+  // https://codepen.io/sdthornton/pen/wBZdXq
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
+  .title{
+    margin: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $black;
+
+    .link{
+      display: block;
+      text-decoration: none;
+      color: $dark-red;
+      transition: all .2s;
+
+      &:hover {
+        transform: translate3d(10px,0px,0px);
+      }
+    }
+
+    &:first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  .description{
+    font-size: 0.8em;
+    color: $black;
+  }
+
+  .language{
+    text-align: right;
+    font-size: 0.6em;
+    color: $black;
+  }
+
+  &:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+}

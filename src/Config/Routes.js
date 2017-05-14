@@ -19,7 +19,7 @@ const Routes = (props) => (
             {/*<Navbar/>*/}
 
             <Switch>
-                <Route exact path="/" component={Home} />
+                <Route path="/" component={Home} />
                 <Route path="/about" component={About} />
                 <Redirect from="/old-match" to="/will-match"/>
                 <Route path="/will-match" component={About}/>

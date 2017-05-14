@@ -31,8 +31,10 @@ class HeaderSection extends Component {
         return {
             "default-state": {
                 gradients: [
-                    ['#834D9B', '#D04ED6'],
-                    ['#1CD8D2', '#93EDC7']
+                    ['#C2185B', '#242F39'],
+                    ['#E91E63', '#C2185B'],
+                    ['#242F39', '#E91E63'],
+                    ['#C2185B', '#242F39'],
                 ]
             }
         }
@@ -44,7 +46,7 @@ class HeaderSection extends Component {
                 <div className="content col-xs row middle-xs center-xs">
                    <div className="col-xs">
                        <h1 className="">
-                           Dylan Temboucti, Mage & Développeur web
+                           Dylan Ballandras, Mage & Développeur web
                        </h1>
                    </div>
                     {/*<img src={logo} className="Home-logo" alt="logo" />*/}
@@ -90,6 +92,11 @@ class GithubSection extends Component {
 
 class BlogSection extends Component {
 
+    constructor() {
+        super();
+        this.description = "J'ai entrepris, lors de la fin de ma première année de DUT MMI, la rédaction d'un blog professionnel sur le thème du développement web et de l'intégration web. Il a pour but principal d'aider les autres étudiants de ma formation ou ceux qui souhaitent évoluer dans ces métiers. De manière plus personnelle, je me forme à la rédaction web pour la première fois. C'est d'ailleurs, un exercice qui demande un grand effort de veille ce qui me permet d'être continuellement à jour sur mes compétences."
+    }
+
     render() {
         return (
             <section className="blog">
@@ -97,6 +104,9 @@ class BlogSection extends Component {
                     <h1>
                         Mon blog
                     </h1>
+                    <p>
+                        {this.description}
+                    </p>
                 </header>
             </section>
         )
