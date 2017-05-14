@@ -3,7 +3,7 @@ http://stackoverflow.com/questions/27928372/react-router-urls-dont-work-when-ref
 ## TUTOS
 
 * [Débuter avec les bons modules](https://medium.com/@patriciolpezjuri/using-create-react-app-with-react-router-express-js-8fa658bf892d)
-
+* [React Doc](https://facebook.github.io/react/docs/state-and-lifecycle.html)
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 

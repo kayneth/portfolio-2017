@@ -3,34 +3,30 @@ import {
     BrowserRouter as Router,
     Route,
     Switch,
-    Redirect,
-    Link
+    Redirect
 } from 'react-router-dom';
 
-// import { Router, Route } from 'react-router';
-
-import App from '../Components/App/App';
+import Home from '../Pages/Home/Home';
 import About from '../Components/About/About';
 import NotFound from '../Components/NotFound/Notfound';
+import Footer from "../Components/Footer/Footer";
+// import Navbar from "../Components/Navbar/Navbar";
 
 const Routes = (props) => (
     <Router {...props}>
         <div>
-            <ul>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/about">About</Link></li>
-                <li><Link to="/topics">Topics</Link></li>
-            </ul>
 
-            <hr/>
+            {/*<Navbar/>*/}
 
             <Switch>
-                <Route exact path="/" component={App} />
+                <Route exact path="/" component={Home} />
                 <Route path="/about" component={About} />
                 <Redirect from="/old-match" to="/will-match"/>
                 <Route path="/will-match" component={About}/>
                 <Route component={NotFound}/>
             </Switch>
+
+            <Footer/>
         </div>
     </Router>
 );

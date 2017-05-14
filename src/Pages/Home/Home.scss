@@ -1,0 +1,36 @@
+.Home-header {
+
+  height: 100vh;
+  max-height: 100vh;
+
+  overflow: hidden;
+  color: white;
+  
+  .content{
+    position: relative;
+    height: 90%;
+
+    h1 {
+      text-align: left;
+
+      &::after{
+        position: absolute;
+        content: "";
+        height: 4px;
+        background-color: #FFF;
+        width: 50%;
+        margin-left: 15px;
+        top: 55%;
+      }
+    }
+
+    #header-gradient{
+      position: absolute;
+      z-index: -1;
+    }
+  }
+}
+
+.portfolio{
+
+}
