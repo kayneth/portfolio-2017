@@ -59,8 +59,10 @@ class Project extends Component {
                     <p className="description col-xs-12">
                         { project.description }
                     </p>
-                    <div className="language col-xs-12">
-                        #{project.language}
+                    <div className="languages col-xs-12">
+                        <span className="language">
+                            #{project.language}
+                        </span>
                     </div>
                 </li>
             </div>

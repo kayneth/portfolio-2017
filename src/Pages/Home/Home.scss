@@ -1,3 +1,5 @@
+@import "../../Config/sass/main.scss";
+
 .Home-header {
 
   height: 100vh;
@@ -12,16 +14,24 @@
 
     h1 {
       text-align: left;
+      font-size: 50px;
+      font-weight: bold;
+      width: 80%;
+      line-height: 1.4;
 
-      &::after{
-        position: absolute;
-        content: "";
-        height: 4px;
-        background-color: #FFF;
-        width: 50%;
-        margin-left: 15px;
-        top: 55%;
+      span{
+        color: lighten($black, 10);
       }
+
+      //&::after{
+      //  position: absolute;
+      //  content: "";
+      //  height: 4px;
+      //  background-color: #FFF;
+      //  width: 50%;
+      //  margin-left: 15px;
+      //  top: 55%;
+      //}
     }
 
     #header-gradient{
@@ -33,4 +43,32 @@
 
 .portfolio{
 
+}
+
+.blog{
+  margin-bottom: 3em;
+  .description{
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: lighten($black, 50);
+    font-weight: 400;
+    line-height: 1.6em;
+    margin-top: 30px;
+  }
+
+  .cta{
+    color: #FFF;
+    border-radius: 30px;
+    display: inline-block;
+    margin: 0;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    padding: 10px 40px;
+    background-color: $light-red;
+    letter-spacing: 1px;
+    font-weight: 700;
+    line-height: 140%;
+    text-decoration: none;
+  }
 }

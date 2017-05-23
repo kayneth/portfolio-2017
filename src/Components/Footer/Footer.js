@@ -7,7 +7,7 @@ export default class Footer extends Component {
         return (
             <footer>
                 <p>
-                    Dylan Temboucti - 2017
+                    Dylan Ballandras - 2017
                 </p>
             </footer>
         )

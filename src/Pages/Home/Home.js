@@ -5,6 +5,7 @@ import 'flexboxgrid-sass';
 import ContactForm from "../../Components/ContactForm/ContactForm";
 import AnimatedGradient from "../../Components/AnimatedGradient/AnimatedGradient";
 import GithubProjects from "../../Components/GithubProjects/GithubProjects";
+import Skills from "../../Components/Skills/Skills";
 
 export default class Home extends Component {
 
@@ -46,7 +47,7 @@ class HeaderSection extends Component {
                 <div className="content col-xs row middle-xs center-xs">
                    <div className="col-xs">
                        <h1 className="">
-                           Dylan Ballandras, Mage & Développeur web
+                           Dylan Ballandras, Mage <span>&</span> Développeur web
                        </h1>
                    </div>
                     {/*<img src={logo} className="Home-logo" alt="logo" />*/}
@@ -66,6 +67,9 @@ class PortfolioSection extends Component {
                     <h1>
                         Mon Portfolio
                     </h1>
+                    <div>
+                        <Skills/>
+                    </div>
                 </header>
             </section>
         )
@@ -104,9 +108,12 @@ class BlogSection extends Component {
                     <h1>
                         Mon blog
                     </h1>
-                    <p>
-                        {this.description}
-                    </p>
+                    <div className="row center-xs">
+                        <p className="description container-fluid">
+                            {this.description}
+                        </p>
+                        <a href="http://dylantemboucti.fr/blog/" className="cta" target="_blank">Mes articles</a>
+                    </div>
                 </header>
             </section>
         )
@@ -118,17 +125,7 @@ class ContactSection extends Component {
     render() {
         return (
             <section className="contact">
-                <header>
-                    <h1>
-                        Me contacter
-                    </h1>
-                </header>
-                <main >
-                    <p>N'hésitez pas à prendre contact avec moi pour tout projets ou questions.</p>
-                    <ContactForm id="contact-form">
-
-                    </ContactForm>
-                </main>
+                <ContactForm/>
             </section>
         )
     }

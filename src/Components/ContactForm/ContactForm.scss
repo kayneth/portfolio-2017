@@ -1,0 +1,151 @@
+@import '../../Config/sass/main.scss';
+
+.contact-form{
+  position: relative;
+  background: $light-red;
+  color: $white;
+  padding: 20px;
+
+  header{
+    text-align: center;
+    h2 {
+      font-weight: 300;
+      font-size: 0.8rem;
+      opacity: .6;
+
+      &::after, &::before {
+        content: ' - ';
+      }
+    }
+  }
+
+  form {
+    position: relative;
+    width: 80%;
+    height: 100px;
+    margin: 0 auto;
+    z-index: 9999;
+    overflow: hidden;
+    background: $white;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    transition: transform .3s cubic-bezier(0.45, -0.01, 0.18, 0.98), background .3s ease;
+
+    .contact-btn{
+      width: 100%;
+      text-align: center;
+      display: block;
+      color: $black;
+      text-decoration: none;
+      font-size: 22px;
+      font-weight: 600;
+      position: relative;
+      z-index: 9999;
+
+      border: none;
+      background: none;
+    }
+
+    fieldset {
+      position: absolute;
+      width: 0;
+      top: 0;
+      left: -900px;
+      bottom:0;
+      opacity: 0;
+      border: none;
+
+      svg {
+        width: 34px;
+        height: 34px;
+        right: 0;
+        top: 50%;
+        position: absolute;
+        margin-top: -38px;
+        padding: 20px;
+        fill: #909090;
+        opacity: 0;
+        cursor: pointer;
+        transition: all .4s ease;
+
+        &:hover {
+          fill: #676767;
+        }
+      }
+
+      label{
+        transition: all .2s 2s ease;
+        font-weight: 400;
+        z-index: 10;
+        font-size: 35px;
+        color: #464646;
+        top: 36px;
+        left: 20px;
+      }
+
+      input {
+        width: 80%;
+        font-size: 35px;
+        font-weight: 400;
+        padding-left: 19px;
+        background: $white;
+        border: none;
+        outline: 0;
+        opacity: 0;
+        transition: all .3s 1.8s ease;
+      }
+
+      #g-recaptcha{
+        opacity: 0;
+      }
+
+      &.step-on {
+        left:0;
+        opacity: 1;
+        width: 100%;
+        transition: opacity .6s .9s ease;
+
+        label {
+          transition: all .2s 2.6s ease;
+          position: absolute;
+          animation: labelAnimation .2s 2.6s ease forwards;
+        }
+
+        input, textarea {
+          opacity: 1;
+        }
+
+        input {
+          height: 100%;
+        }
+
+        @keyframes labelAnimation {
+          0% {
+            font-weight: 400;
+            z-index: 10;
+            font-size: 35px;
+            color: #464646;
+            top: 36px;
+            left: 20px;
+          }
+          100% {
+            top: 20px;
+            font-size: 13px;
+            font-weight: 300;
+            color: #A0A0A0;
+          }
+        }
+      }
+    }
+
+  }
+
+  .displayBlock {
+    opacity: 1;
+  }
+
+  &.activated {
+    .contact-btn {
+      display: none;
+    }
+  }
+}
