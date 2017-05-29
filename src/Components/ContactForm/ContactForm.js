@@ -75,6 +75,9 @@ export default class ContactForm extends Component {
 
     stepSend = (e) => {
         e.preventDefault();
+        document.getElementById("contact-message").classList.add("step-off");
+        document.getElementById("contact-message").classList.remove("step-on");
+        document.getElementById("contact-sent").classList.add("step-on");
     };
 
     // handle reset
@@ -133,6 +136,11 @@ export default class ContactForm extends Component {
                                 onloadCallback={this.callback}
                                 expiredCallback={this.expiredCallback}
                             />
+                        </fieldset>
+                        <fieldset id="contact-sent">
+                            <p>
+                                Message envoyé
+                            </p>
                         </fieldset>
                         {/*<button type="button"*/}
                         {/*onClick={this.resetRecaptcha}*/}

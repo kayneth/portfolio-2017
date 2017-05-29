@@ -6,6 +6,7 @@ import ContactForm from "../../Components/ContactForm/ContactForm";
 import AnimatedGradient from "../../Components/AnimatedGradient/AnimatedGradient";
 import GithubProjects from "../../Components/GithubProjects/GithubProjects";
 import Skills from "../../Components/Skills/Skills";
+import Portfolio from "../../Components/Portfolio/Portfolio";
 
 export default class Home extends Component {
 
@@ -68,6 +69,7 @@ class PortfolioSection extends Component {
                         Mon Portfolio
                     </h1>
                     <div>
+                        <Portfolio/>
                         <Skills/>
                     </div>
                 </header>
