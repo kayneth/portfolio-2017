@@ -2,7 +2,7 @@
   "name": "portfolio-2017",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://dylantemboucti.fr/lab/portfolio-2017",
+  "homepage": "http://dylan-ballandras.fr/portfolio",
   "dependencies": {
     "axios": "^0.16.1",
     "classnames": "^2.2.5",
@@ -14,7 +14,8 @@
     "react-icons": "^2.2.5",
     "react-recaptcha": "^2.2.6",
     "react-router": "^4.1.1",
-    "react-router-dom": "^4.1.1"
+    "react-router-dom": "^4.1.1",
+    "react-tilt": "^0.1.3"
   },
   "devDependencies": {
     "node-sass-chokidar": "0.0.1",

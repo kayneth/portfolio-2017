@@ -80,8 +80,9 @@
         z-index: 10;
         font-size: 35px;
         color: #464646;
-        top: 36px;
+        top: 30px;
         left: 20px;
+        background: #E9F1FD;
       }
 
       input {
@@ -126,12 +127,15 @@
 
         textarea {
           opacity: 1;
+
           position: absolute;
           bottom: 0;
           left:0;
-          resize: none;
           width: 80%;
           height: 70%;
+          padding-left: 30px;
+          font-size: 1.4em;
+          resize: none;
           background: none;
           border: none;
           outline: none;

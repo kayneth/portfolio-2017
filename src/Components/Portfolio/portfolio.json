@@ -1,14 +1,29 @@
 [
   {
+    "id": 1,
     "title" : "Site web Associatif : Shiawa",
-    "description": "Projet Symfony",
-    "illustration":  "test.jpg",
-    "link": "https://www.shiawa.fr"
+    "short_description": "J'ai travaillé sur mon premier projet avec Symfony 3 grâce à l'association Shiawa pour laquelle je suis secrétaire. J'ai réalisé tout le travail de développement back-end accompagné de Fabien Moulet en tant que web designer.",
+    "illustration":  "portfolio/projects/shiawa/shiawa-fr-symfony.png",
+    "type": "",
+    "link": "https://www.shiawa.fr",
+    "open-source": "https://github.com/Association-Shiawa/Shiawa",
+    "technologies": [
+      "Symfony 3",
+      "Sass",
+      "Intégration Continue"
+    ]
   },
   {
+    "id": 2,
     "title" : "Giboulées Numériques",
-    "description": "Site web évenementiel",
-    "illustration":  "test.jpg",
-    "link": "https://www.shiawa.fr"
+    "short_description": "Les Giboulées Numériques sont un Festival d'Arts Numériques qui se déroulera le 11 mars 2016 à l'IUT Paul Sabatier de Castres et organisé par les étudiants MMI. J'ai eu comme rôle l'intégration du site et sa mise en ligne. Lors du développement de celui-ci j'en ai profité pour essayer Gulp.js afin d'améliorer mon worflow front-end.",
+    "illustration":  "portfolio/projects/giboulees-numeriques/giboulees_numeriques-fr.png",
+    "type": "",
+    "link": "http://giboulees-numeriques.fr/",
+    "open-source": "https://github.com/kayneth/fan-giboulees-numeriques",
+    "technologies": [
+      "Gulp",
+      "Bootstrap"
+    ]
   }
 ]

@@ -1,0 +1,47 @@
+@import "../../Config/sass/main.scss";
+
+.Work{
+  .portfolio-project {
+
+    .projet-wrapper {
+
+      .img-container{
+        position: relative;
+
+        .img-overlay{
+          background: rgba(0,0,0,.6);
+          position: absolute;
+          width: 100%;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom:0;
+        }
+
+      }
+      
+      .content-wrapper {
+        z-index: 2;
+        margin-top: -50px;
+        border-radius: 10px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        padding: 10px;
+        background-color: #fff;
+
+        .title{
+          text-align: center;
+          color: $light-red;
+          a{
+            text-decoration: none;
+            color: inherit;
+          }
+        }
+
+        .content{
+          width: 80%;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}

@@ -98,7 +98,7 @@ export default class ContactForm extends Component {
                        Besoin d'informations ?
                     </h1>
                     <h2>
-                        N'hésitez pas à prendre contact avec moi pour tout projets ou questions
+                        N'hésitez pas à prendre contact avec moi pour tous projets ou questions | <small>Bientôt disponible</small>
                     </h2>
                 </header>
                 <main >

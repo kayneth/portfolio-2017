@@ -7,6 +7,11 @@ import AnimatedGradient from "../../Components/AnimatedGradient/AnimatedGradient
 import GithubProjects from "../../Components/GithubProjects/GithubProjects";
 import Skills from "../../Components/Skills/Skills";
 import Portfolio from "../../Components/Portfolio/Portfolio";
+import Tilt from 'react-tilt';
+import FaGithub from 'react-icons/lib/fa/github';
+import FaTwitter from 'react-icons/lib/fa/twitter';
+import FaLinkedin from 'react-icons/lib/fa/linkedin';
+import FaFileO from 'react-icons/lib/fa/file-o';
 
 export default class Home extends Component {
 
@@ -18,7 +23,7 @@ export default class Home extends Component {
                 <main>
                     <PortfolioSection/>
                     <GithubSection/>
-                    <BlogSection/>
+                    {/*<BlogSection/>*/}
                     <ContactSection/>
                 </main>
             </div>
@@ -45,15 +50,48 @@ class HeaderSection extends Component {
     render() {
         return (
             <header className="Home-header row middle-xs center-xs">
-                <div className="content col-xs row middle-xs center-xs">
-                   <div className="col-xs">
-                       <h1 className="">
-                           Dylan Ballandras, Mage <span>&</span> Développeur web
-                       </h1>
-                   </div>
-                    {/*<img src={logo} className="Home-logo" alt="logo" />*/}
-                    <AnimatedGradient id="header-gradient" states={this.states} direction="diagonal"/>
-                </div>
+                <Tilt Tilt className="Tilt content col-xs col-sm-10 row middle-xs center-xs" options={{ max : 10, reverse: true, scale: 1.05, speed: 100 }} >
+                    <div className=" Tilt-inner">
+                        <div className="col-xs Tilt-inner">
+                            <h1 className="">
+                                Dylan Ballandras, Mage <span>&</span> Développeur web
+                            </h1>
+                            <h2>
+                                Développeur Front & Back-End
+                            </h2>
+
+                            <ul className="rsn">
+                                <li>
+                                    <a target="_blank" href="https://github.com/Kayneth">
+                                       <FaGithub/>
+                                        Kayneth
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://twitter.com/kayneth_light">
+                                        <FaTwitter/>
+                                        Kayneth_Light
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.linkedin.com/in/dballandras/">
+                                        <FaLinkedin/>
+                                        Dylan Ballandras
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="http://dylan-ballandras.fr/cv_ballandras_dylan.pdf">
+                                        <FaFileO/>
+                                        Mon CV
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </div>
+                        {/*<img src={logo} className="Home-logo" alt="logo" />*/}
+                        <AnimatedGradient id="header-gradient" states={this.states} direction="diagonal"/>
+                    </div>
+                </Tilt>
             </header>
         )
     }
@@ -114,7 +152,7 @@ class BlogSection extends Component {
                         <p className="description container-fluid">
                             {this.description}
                         </p>
-                        <a href="http://dylantemboucti.fr/blog/" className="cta" target="_blank">Mes articles</a>
+                        <a href="http://dylan-ballandras.fr/blog/" className="cta" target="_blank">Mes articles</a>
                     </div>
                 </header>
             </section>

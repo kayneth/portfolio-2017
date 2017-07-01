@@ -1,3 +1,112 @@
-.portfolio {
+@import "../../Config/sass/variables";
 
+.portfolio {
+  ul {
+    li.portfolio-project {
+      position: relative;
+      list-style: none;
+      max-height: 80vh;
+      margin-bottom: 100px;
+      overflow: hidden;
+      padding: 0;
+      border-radius: 5px;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+      a{
+        text-decoration: none;
+        color: $black;
+      }
+
+      .img-container{
+        position: relative;
+        max-height: 78vh;
+        padding: 0;
+        overflow: hidden;
+
+        img{
+          max-width: 100%;
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: -10px;
+          width: 100%;
+          height: 20vh;
+          pointer-events   : none;
+          background-image : linear-gradient(to bottom,
+                  rgba(255,255,255, 0),
+                  rgba(255,255,255, 1) 80%);
+        }
+      }
+
+      .content {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 20px;
+        background: $white;
+        .title {
+          color: $dark-red;
+        }
+
+        .description{
+        }
+
+        .technologies{
+          position: absolute;
+          bottom: 10px;
+
+          .technology{
+
+            margin: 5px;
+            padding: 5px 10px;
+            border-radius: 20px;
+            color: $white;
+            background: $light-red;
+            font-size: 0.6em;
+          }
+        }
+
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 48em){
+  .portfolio {
+    ul {
+      
+      li.portfolio-project {
+        box-shadow: none;
+        height: 40vh;
+
+        .projet-wrapper{
+          height: 100%;
+
+          .img-container{
+            height: 100%;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            img{
+            }
+
+            &::after {
+            }
+          }
+
+          .content {
+            position: initial;
+            .title {
+              font-size: 1.5em;
+            }
+
+            .description{
+              font-size: 1em;
+            }
+          }
+        }
+      }
+    }
+  }
 }

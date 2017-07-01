@@ -1,3 +1,18 @@
+@import "variables";
+
+*{
+  font-family: 'Nunito', sans-serif;
+}
+
+h1, h2 {
+  font-family: 'Droid Sans', sans-serif;
+}
+
+a[href]:not([class]) {
+  color: $black;
+  text-decoration: none;
+}
+
 footer {
   text-align: center;
 }
