@@ -68,7 +68,7 @@ export default class Work extends Component {
         console.log(work);
 
         return (
-            <div className="Work container-fluid">
+            <div className="Work">
                 {
                     this.state.work.map(item => (
                         <Realisation key={item.id} project={item} />
@@ -86,24 +86,33 @@ class Realisation extends Component
         const { project } = this.props;
 
         return (
-            <div className="portfolio-project col-xs-12">
-                <div className="row projet-wrapper">
-                    <div className="img-container col-xs-12">
-                        <div className="row center-xs middle-xs">
-                            <div className="col-sm-6">
-                                <div className="img-overlay"/>
-                                <img src={project.image} alt=" "/>
-                            </div>
-                        </div>
+            <div className="portfolio-project">
+                <div className="projet-wrapper">
+                    <div className="img-container">
+                        <div className="img-overlay"/>
+                        <img src={project.image} alt=" "/>
                     </div>
-                    <div className="content-wrapper col-xs-12">
+                    <div className="content-wrapper container-fluid">
                         <div className="row">
-                            <h1 className="title col-xs-12">
-                                <a href={project.link} target="_blank" className="link col-xs-12 col-sm-6">
-                                    { project.title.rendered }
-                                </a>
-                            </h1>
-                            <p className="content col-xs-12 col-sm-6" dangerouslySetInnerHTML={{ __html: project.content.rendered }} />
+                            <div className="col-sm-8">
+                                <h1 className="title col-xs-12">
+                                    <a href={project.acf.website} target="_blank" className="link">
+                                        { project.title.rendered }
+                                    </a>
+                                </h1>
+                                <p className="content col-xs-12 col-sm-10" dangerouslySetInnerHTML={{ __html: project.content.rendered }} />
+
+                            </div>
+                            <aside className="project-infos col-sm-4">
+                               <ul className="row center-xs">
+                                   <li>
+                                       Rôle : { project.acf.role }
+                                   </li>
+                                   <li>
+                                       Site web : <a href={ project.acf.website } target="_blank">{ project.acf.website }</a>
+                                   </li>
+                               </ul>
+                            </aside>
                         </div>
                     </div>
                 </div>

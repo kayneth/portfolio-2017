@@ -7,6 +7,10 @@
 
       .img-container{
         position: relative;
+        overflow: hidden;
+        min-height: 30vh;
+        z-index: 1;
+        text-align: center;
 
         .img-overlay{
           background: rgba(0,0,0,.6);
@@ -18,11 +22,16 @@
           bottom:0;
         }
 
+        img{
+          max-width: 100%;
+        }
+
       }
       
       .content-wrapper {
+        position: relative;
         z-index: 2;
-        margin-top: -50px;
+        transform: translateY(-60px);
         border-radius: 10px;
         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
         padding: 10px;
@@ -40,6 +49,19 @@
         .content{
           width: 80%;
           margin: 0 auto;
+        }
+
+        aside.project-infos{
+
+          ul {
+            li {
+              list-style: none;
+            }
+          }
+        }
+
+        @media screen and (min-width: 62em){
+          width: 60%;
         }
       }
     }
